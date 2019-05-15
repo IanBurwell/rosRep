@@ -1,0 +1,7 @@
+#Driver:
+https://launchpad.net/~yani/+archive/ubuntu/iatsl
+https://github.com/avin2/SensorKinect
+
+sudo apt-get install ros-kinetic-openni-camera
+
+

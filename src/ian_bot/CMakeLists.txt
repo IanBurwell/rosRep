@@ -55,7 +55,7 @@ add_message_files(
 ## Generate services in the 'srv' folder
 add_service_files(
   FILES
-  PWM.srv
+  PWMget.srv
 )
 
 ## Generate actions in the 'action' folder
