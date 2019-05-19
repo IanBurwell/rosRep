@@ -1,5 +1,19 @@
 <launch>
 
-    <node name="openni_node" pkg="openni_camera" type="openni_node"/>
+    <arg name="cam" default="camera">
+    <include file="$(find freenect_launch)/launch/freenect.launch">
+        <arg name="camera" value="$(arg cam)">
+        
+        <arg name="rgb_processing" value="false"/>
+        <arg name="debayer_processing" value="false"/>
+        <arg name="ir_processing" value="false"/>
+        <arg name="depth_processing" value="false"/>
+        <arg name="depth_registered_processing" value="false"/>
+        <arg name="disparity_processing" value="false"/>
+        <arg name="sw_registered_processing" value="false"/>
+        <arg name="hw_registered_processing" value="false"/>
+    </include>
+
+    <node pkg="nodelet" type="nodelet" name="depthimage_to_laserscan" args="load depthimage_to_laserscan/DepthImageToLaserScanNodelet $(arg cam)_nodelet_manager">
 
 </launch>
