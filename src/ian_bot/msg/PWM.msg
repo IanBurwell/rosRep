@@ -1,5 +1,5 @@
 #0-31
 uint8 pin
 
-#0-255
-uint8 duty
+#500 - 2500 (0-3000)
+uint16 width
