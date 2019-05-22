@@ -13,6 +13,7 @@
         <arg name="hw_registered_processing" value="false"/>
     </include>
 
+
     <node ns="camera" pkg="nodelet" type="nodelet" name="depthimage_to_laserscan" args="load depthimage_to_laserscan/DepthImageToLaserScanNodelet $(arg cam)_nodelet_manager">
         <remap from="image" to="depth/image_raw"/>
     </node>
