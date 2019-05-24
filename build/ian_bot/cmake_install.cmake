@@ -37,7 +37,10 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ian_bot/srv" TYPE FILE FILES "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ian_bot/srv" TYPE FILE FILES
+    "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv"
+    "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv"
+    )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")

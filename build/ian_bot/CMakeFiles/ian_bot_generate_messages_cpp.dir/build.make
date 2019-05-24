@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
 include ian_bot/CMakeFiles/ian_bot_generate_messages_cpp.dir/progress.make
 
 ian_bot/CMakeFiles/ian_bot_generate_messages_cpp: /home/ubuntu/catkin_ws/devel/include/ian_bot/PWM.h
+ian_bot/CMakeFiles/ian_bot_generate_messages_cpp: /home/ubuntu/catkin_ws/devel/include/ian_bot/PWMfreq.h
 ian_bot/CMakeFiles/ian_bot_generate_messages_cpp: /home/ubuntu/catkin_ws/devel/include/ian_bot/PWMget.h
 
 
@@ -63,15 +64,23 @@ ian_bot/CMakeFiles/ian_bot_generate_messages_cpp: /home/ubuntu/catkin_ws/devel/i
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from ian_bot/PWM.msg"
 	cd /home/ubuntu/catkin_ws/src/ian_bot && /home/ubuntu/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg -Iian_bot:/home/ubuntu/catkin_ws/src/ian_bot/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p ian_bot -o /home/ubuntu/catkin_ws/devel/include/ian_bot -e /opt/ros/kinetic/share/gencpp/cmake/..
 
+/home/ubuntu/catkin_ws/devel/include/ian_bot/PWMfreq.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/catkin_ws/devel/include/ian_bot/PWMfreq.h: /home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv
+/home/ubuntu/catkin_ws/devel/include/ian_bot/PWMfreq.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/ubuntu/catkin_ws/devel/include/ian_bot/PWMfreq.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from ian_bot/PWMfreq.srv"
+	cd /home/ubuntu/catkin_ws/src/ian_bot && /home/ubuntu/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv -Iian_bot:/home/ubuntu/catkin_ws/src/ian_bot/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p ian_bot -o /home/ubuntu/catkin_ws/devel/include/ian_bot -e /opt/ros/kinetic/share/gencpp/cmake/..
+
 /home/ubuntu/catkin_ws/devel/include/ian_bot/PWMget.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/catkin_ws/devel/include/ian_bot/PWMget.h: /home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv
 /home/ubuntu/catkin_ws/devel/include/ian_bot/PWMget.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/ubuntu/catkin_ws/devel/include/ian_bot/PWMget.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from ian_bot/PWMget.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from ian_bot/PWMget.srv"
 	cd /home/ubuntu/catkin_ws/src/ian_bot && /home/ubuntu/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv -Iian_bot:/home/ubuntu/catkin_ws/src/ian_bot/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p ian_bot -o /home/ubuntu/catkin_ws/devel/include/ian_bot -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 ian_bot_generate_messages_cpp: ian_bot/CMakeFiles/ian_bot_generate_messages_cpp
 ian_bot_generate_messages_cpp: /home/ubuntu/catkin_ws/devel/include/ian_bot/PWM.h
+ian_bot_generate_messages_cpp: /home/ubuntu/catkin_ws/devel/include/ian_bot/PWMfreq.h
 ian_bot_generate_messages_cpp: /home/ubuntu/catkin_ws/devel/include/ian_bot/PWMget.h
 ian_bot_generate_messages_cpp: ian_bot/CMakeFiles/ian_bot_generate_messages_cpp.dir/build.make
 

@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg"
-services_str = "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv"
+services_str = "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv;/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv"
 pkg_name = "ian_bot"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

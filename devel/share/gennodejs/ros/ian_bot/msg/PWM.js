@@ -19,7 +19,7 @@ class PWM {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.pin = null;
-      this.duty = null;
+      this.width = null;
     }
     else {
       if (initObj.hasOwnProperty('pin')) {
@@ -28,11 +28,11 @@ class PWM {
       else {
         this.pin = 0;
       }
-      if (initObj.hasOwnProperty('duty')) {
-        this.duty = initObj.duty
+      if (initObj.hasOwnProperty('width')) {
+        this.width = initObj.width
       }
       else {
-        this.duty = 0;
+        this.width = 0;
       }
     }
   }
@@ -41,8 +41,8 @@ class PWM {
     // Serializes a message object of type PWM
     // Serialize message field [pin]
     bufferOffset = _serializer.uint8(obj.pin, buffer, bufferOffset);
-    // Serialize message field [duty]
-    bufferOffset = _serializer.uint8(obj.duty, buffer, bufferOffset);
+    // Serialize message field [width]
+    bufferOffset = _serializer.uint16(obj.width, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -52,13 +52,13 @@ class PWM {
     let data = new PWM(null);
     // Deserialize message field [pin]
     data.pin = _deserializer.uint8(buffer, bufferOffset);
-    // Deserialize message field [duty]
-    data.duty = _deserializer.uint8(buffer, bufferOffset);
+    // Deserialize message field [width]
+    data.width = _deserializer.uint16(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 2;
+    return 3;
   }
 
   static datatype() {
@@ -68,7 +68,7 @@ class PWM {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'a1987ff6213a184ccd240b69dafb5382';
+    return '4d014280e020a5ca2f6af8bf78a593ff';
   }
 
   static messageDefinition() {
@@ -77,8 +77,8 @@ class PWM {
     #0-31
     uint8 pin
     
-    #0-255
-    uint8 duty
+    #500 - 2500 (0-3000)
+    uint16 width
     
     `;
   }
@@ -96,11 +96,11 @@ class PWM {
       resolved.pin = 0
     }
 
-    if (msg.duty !== undefined) {
-      resolved.duty = msg.duty;
+    if (msg.width !== undefined) {
+      resolved.width = msg.width;
     }
     else {
-      resolved.duty = 0
+      resolved.width = 0
     }
 
     return resolved;

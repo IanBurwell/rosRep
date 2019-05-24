@@ -7,17 +7,17 @@ import struct
 
 
 class PWM(genpy.Message):
-  _md5sum = "a1987ff6213a184ccd240b69dafb5382"
+  _md5sum = "4d014280e020a5ca2f6af8bf78a593ff"
   _type = "ian_bot/PWM"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """#0-31
 uint8 pin
 
-#0-255
-uint8 duty
+#500 - 2500 (0-3000)
+uint16 width
 """
-  __slots__ = ['pin','duty']
-  _slot_types = ['uint8','uint8']
+  __slots__ = ['pin','width']
+  _slot_types = ['uint8','uint16']
 
   def __init__(self, *args, **kwds):
     """
@@ -27,7 +27,7 @@ uint8 duty
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       pin,duty
+       pin,width
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -38,11 +38,11 @@ uint8 duty
       #message fields cannot be None, assign default values for those that are
       if self.pin is None:
         self.pin = 0
-      if self.duty is None:
-        self.duty = 0
+      if self.width is None:
+        self.width = 0
     else:
       self.pin = 0
-      self.duty = 0
+      self.width = 0
 
   def _get_types(self):
     """
@@ -57,7 +57,7 @@ uint8 duty
     """
     try:
       _x = self
-      buff.write(_get_struct_2B().pack(_x.pin, _x.duty))
+      buff.write(_get_struct_BH().pack(_x.pin, _x.width))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -70,8 +70,8 @@ uint8 duty
       end = 0
       _x = self
       start = end
-      end += 2
-      (_x.pin, _x.duty,) = _get_struct_2B().unpack(str[start:end])
+      end += 3
+      (_x.pin, _x.width,) = _get_struct_BH().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -85,7 +85,7 @@ uint8 duty
     """
     try:
       _x = self
-      buff.write(_get_struct_2B().pack(_x.pin, _x.duty))
+      buff.write(_get_struct_BH().pack(_x.pin, _x.width))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -99,8 +99,8 @@ uint8 duty
       end = 0
       _x = self
       start = end
-      end += 2
-      (_x.pin, _x.duty,) = _get_struct_2B().unpack(str[start:end])
+      end += 3
+      (_x.pin, _x.width,) = _get_struct_BH().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -109,9 +109,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2B = None
-def _get_struct_2B():
-    global _struct_2B
-    if _struct_2B is None:
-        _struct_2B = struct.Struct("<2B")
-    return _struct_2B
+_struct_BH = None
+def _get_struct_BH():
+    global _struct_BH
+    if _struct_BH is None:
+        _struct_BH = struct.Struct("<BH")
+    return _struct_BH

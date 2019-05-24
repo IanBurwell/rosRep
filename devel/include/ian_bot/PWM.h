@@ -25,11 +25,11 @@ struct PWM_
 
   PWM_()
     : pin(0)
-    , duty(0)  {
+    , width(0)  {
     }
   PWM_(const ContainerAllocator& _alloc)
     : pin(0)
-    , duty(0)  {
+    , width(0)  {
   (void)_alloc;
     }
 
@@ -38,8 +38,8 @@ struct PWM_
    typedef uint8_t _pin_type;
   _pin_type pin;
 
-   typedef uint8_t _duty_type;
-  _duty_type duty;
+   typedef uint16_t _width_type;
+  _width_type width;
 
 
 
@@ -119,12 +119,12 @@ struct MD5Sum< ::ian_bot::PWM_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "a1987ff6213a184ccd240b69dafb5382";
+    return "4d014280e020a5ca2f6af8bf78a593ff";
   }
 
   static const char* value(const ::ian_bot::PWM_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xa1987ff6213a184cULL;
-  static const uint64_t static_value2 = 0xcd240b69dafb5382ULL;
+  static const uint64_t static_value1 = 0x4d014280e020a5caULL;
+  static const uint64_t static_value2 = 0x2f6af8bf78a593ffULL;
 };
 
 template<class ContainerAllocator>
@@ -146,8 +146,8 @@ struct Definition< ::ian_bot::PWM_<ContainerAllocator> >
     return "#0-31\n\
 uint8 pin\n\
 \n\
-#0-255\n\
-uint8 duty\n\
+#500 - 2500 (0-3000)\n\
+uint16 width\n\
 ";
   }
 
@@ -167,7 +167,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.pin);
-      stream.next(m.duty);
+      stream.next(m.width);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -188,8 +188,8 @@ struct Printer< ::ian_bot::PWM_<ContainerAllocator> >
   {
     s << indent << "pin: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.pin);
-    s << indent << "duty: ";
-    Printer<uint8_t>::stream(s, indent + "  ", v.duty);
+    s << indent << "width: ";
+    Printer<uint16_t>::stream(s, indent + "  ", v.width);
   }
 };
 

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ian_bot_generate_messages_lisp"
   "/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/ian_bot/msg/PWM.lisp"
+  "/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/ian_bot/srv/PWMfreq.lisp"
   "/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/ian_bot/srv/PWMget.lisp"
 )
 

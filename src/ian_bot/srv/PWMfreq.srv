@@ -1,0 +1,10 @@
+#gpio pin 0-31
+uint8 pin
+
+#frequency >= 0 Hz
+uint16 freq
+
+---
+
+#actual set frequency
+uint16 actual_freq

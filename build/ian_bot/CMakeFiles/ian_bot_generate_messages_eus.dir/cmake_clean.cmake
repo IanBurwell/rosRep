@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ian_bot_generate_messages_eus"
   "/home/ubuntu/catkin_ws/devel/share/roseus/ros/ian_bot/msg/PWM.l"
+  "/home/ubuntu/catkin_ws/devel/share/roseus/ros/ian_bot/srv/PWMfreq.l"
   "/home/ubuntu/catkin_ws/devel/share/roseus/ros/ian_bot/srv/PWMget.l"
   "/home/ubuntu/catkin_ws/devel/share/roseus/ros/ian_bot/manifest.l"
 )
