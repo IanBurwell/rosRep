@@ -1,2 +1,2 @@
 bot_host:ian_bot
--DCATKIN_DEVEL_PREFIX=/home/ubuntu/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/catkin_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/ian/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ian/catkin_ws/install -G Unix Makefiles

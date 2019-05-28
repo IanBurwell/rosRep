@@ -2,7 +2,7 @@
 
 message(STATUS "ian_bot: 1 messages, 2 services")
 
-set(MSG_I_FLAGS "-Iian_bot:/home/ubuntu/catkin_ws/src/ian_bot/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iian_bot:/home/ian/catkin_ws/src/ian_bot/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,19 +17,19 @@ add_custom_target(ian_bot_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/srv/PWMfreq.srv" NAME_WE)
 add_custom_target(_ian_bot_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ian_bot" "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ian_bot" "/home/ian/catkin_ws/src/ian_bot/srv/PWMfreq.srv" ""
 )
 
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/msg/PWM.msg" NAME_WE)
 add_custom_target(_ian_bot_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ian_bot" "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ian_bot" "/home/ian/catkin_ws/src/ian_bot/msg/PWM.msg" ""
 )
 
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/srv/PWMget.srv" NAME_WE)
 add_custom_target(_ian_bot_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ian_bot" "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ian_bot" "/home/ian/catkin_ws/src/ian_bot/srv/PWMget.srv" ""
 )
 
 #
@@ -39,7 +39,7 @@ add_custom_target(_ian_bot_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg"
+  "/home/ian/catkin_ws/src/ian_bot/msg/PWM.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ian_bot
@@ -47,13 +47,13 @@ _generate_msg_cpp(ian_bot
 
 ### Generating Services
 _generate_srv_cpp(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv"
+  "/home/ian/catkin_ws/src/ian_bot/srv/PWMfreq.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ian_bot
 )
 _generate_srv_cpp(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv"
+  "/home/ian/catkin_ws/src/ian_bot/srv/PWMget.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ian_bot
@@ -71,11 +71,11 @@ add_custom_target(ian_bot_generate_messages_cpp
 add_dependencies(ian_bot_generate_messages ian_bot_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/srv/PWMfreq.srv" NAME_WE)
 add_dependencies(ian_bot_generate_messages_cpp _ian_bot_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/msg/PWM.msg" NAME_WE)
 add_dependencies(ian_bot_generate_messages_cpp _ian_bot_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/srv/PWMget.srv" NAME_WE)
 add_dependencies(ian_bot_generate_messages_cpp _ian_bot_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -88,7 +88,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ian_bot_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg"
+  "/home/ian/catkin_ws/src/ian_bot/msg/PWM.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ian_bot
@@ -96,13 +96,13 @@ _generate_msg_eus(ian_bot
 
 ### Generating Services
 _generate_srv_eus(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv"
+  "/home/ian/catkin_ws/src/ian_bot/srv/PWMfreq.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ian_bot
 )
 _generate_srv_eus(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv"
+  "/home/ian/catkin_ws/src/ian_bot/srv/PWMget.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ian_bot
@@ -120,11 +120,11 @@ add_custom_target(ian_bot_generate_messages_eus
 add_dependencies(ian_bot_generate_messages ian_bot_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/srv/PWMfreq.srv" NAME_WE)
 add_dependencies(ian_bot_generate_messages_eus _ian_bot_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/msg/PWM.msg" NAME_WE)
 add_dependencies(ian_bot_generate_messages_eus _ian_bot_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/srv/PWMget.srv" NAME_WE)
 add_dependencies(ian_bot_generate_messages_eus _ian_bot_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -137,7 +137,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ian_bot_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg"
+  "/home/ian/catkin_ws/src/ian_bot/msg/PWM.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ian_bot
@@ -145,13 +145,13 @@ _generate_msg_lisp(ian_bot
 
 ### Generating Services
 _generate_srv_lisp(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv"
+  "/home/ian/catkin_ws/src/ian_bot/srv/PWMfreq.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ian_bot
 )
 _generate_srv_lisp(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv"
+  "/home/ian/catkin_ws/src/ian_bot/srv/PWMget.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ian_bot
@@ -169,11 +169,11 @@ add_custom_target(ian_bot_generate_messages_lisp
 add_dependencies(ian_bot_generate_messages ian_bot_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/srv/PWMfreq.srv" NAME_WE)
 add_dependencies(ian_bot_generate_messages_lisp _ian_bot_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/msg/PWM.msg" NAME_WE)
 add_dependencies(ian_bot_generate_messages_lisp _ian_bot_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/srv/PWMget.srv" NAME_WE)
 add_dependencies(ian_bot_generate_messages_lisp _ian_bot_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -186,7 +186,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ian_bot_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg"
+  "/home/ian/catkin_ws/src/ian_bot/msg/PWM.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ian_bot
@@ -194,13 +194,13 @@ _generate_msg_nodejs(ian_bot
 
 ### Generating Services
 _generate_srv_nodejs(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv"
+  "/home/ian/catkin_ws/src/ian_bot/srv/PWMfreq.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ian_bot
 )
 _generate_srv_nodejs(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv"
+  "/home/ian/catkin_ws/src/ian_bot/srv/PWMget.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ian_bot
@@ -218,11 +218,11 @@ add_custom_target(ian_bot_generate_messages_nodejs
 add_dependencies(ian_bot_generate_messages ian_bot_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/srv/PWMfreq.srv" NAME_WE)
 add_dependencies(ian_bot_generate_messages_nodejs _ian_bot_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/msg/PWM.msg" NAME_WE)
 add_dependencies(ian_bot_generate_messages_nodejs _ian_bot_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/srv/PWMget.srv" NAME_WE)
 add_dependencies(ian_bot_generate_messages_nodejs _ian_bot_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -235,7 +235,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ian_bot_generate_messages_nodejs)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg"
+  "/home/ian/catkin_ws/src/ian_bot/msg/PWM.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ian_bot
@@ -243,13 +243,13 @@ _generate_msg_py(ian_bot
 
 ### Generating Services
 _generate_srv_py(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv"
+  "/home/ian/catkin_ws/src/ian_bot/srv/PWMfreq.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ian_bot
 )
 _generate_srv_py(ian_bot
-  "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv"
+  "/home/ian/catkin_ws/src/ian_bot/srv/PWMget.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ian_bot
@@ -267,11 +267,11 @@ add_custom_target(ian_bot_generate_messages_py
 add_dependencies(ian_bot_generate_messages ian_bot_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMfreq.srv" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/srv/PWMfreq.srv" NAME_WE)
 add_dependencies(ian_bot_generate_messages_py _ian_bot_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/msg/PWM.msg" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/msg/PWM.msg" NAME_WE)
 add_dependencies(ian_bot_generate_messages_py _ian_bot_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/ian_bot/srv/PWMget.srv" NAME_WE)
+get_filename_component(_filename "/home/ian/catkin_ws/src/ian_bot/srv/PWMget.srv" NAME_WE)
 add_dependencies(ian_bot_generate_messages_py _ian_bot_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/catkin_ws/src/bot_host
+# Install script for directory: /home/ian/catkin_ws/src/bot_host
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ian/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/catkin_ws/build/bot_host/catkin_generated/installspace/bot_host.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ian/catkin_ws/build/bot_host/catkin_generated/installspace/bot_host.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bot_host/cmake" TYPE FILE FILES
-    "/home/ubuntu/catkin_ws/build/bot_host/catkin_generated/installspace/bot_hostConfig.cmake"
-    "/home/ubuntu/catkin_ws/build/bot_host/catkin_generated/installspace/bot_hostConfig-version.cmake"
+    "/home/ian/catkin_ws/build/bot_host/catkin_generated/installspace/bot_hostConfig.cmake"
+    "/home/ian/catkin_ws/build/bot_host/catkin_generated/installspace/bot_hostConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bot_host" TYPE FILE FILES "/home/ubuntu/catkin_ws/src/bot_host/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bot_host" TYPE FILE FILES "/home/ian/catkin_ws/src/bot_host/package.xml")
 endif()
 

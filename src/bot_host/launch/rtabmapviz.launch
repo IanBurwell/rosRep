@@ -1,0 +1,3 @@
+<launch>
+	<node pkg="rtabma[_ros" type="rtabmapviz" name="rtabmapviz" />
+</launch>
